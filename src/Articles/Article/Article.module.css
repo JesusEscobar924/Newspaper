@@ -1,0 +1,30 @@
+.Article{
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+.Image{
+    width: 300px;
+    height: 200px;
+}
+.Title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.Description{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-align: left;
+}
+.Author{
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    color: #9e9c9c; 
+    text-align: left;
+}

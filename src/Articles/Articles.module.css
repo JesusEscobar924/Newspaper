@@ -1,0 +1,10 @@
+.Articles{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 1rem;
+    justify-content: center;
+    
+    padding: 20px 40px;
+
+}

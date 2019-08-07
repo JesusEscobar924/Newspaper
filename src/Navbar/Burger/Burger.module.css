@@ -1,0 +1,32 @@
+.Burger {
+    width: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 500;
+    transition: transform 1s ease-in;
+}
+
+.Burger div {
+    width: 90%;
+    height: 4px;
+    background-color: rgb(44, 44, 44);
+}
+
+.Open{
+    transform:rotate(250deg);
+}
+
+.Close{
+    transform: rotate(360deg)
+}
+
+@media (min-width: 500px) {
+    .Burger {
+        display: none;
+    }
+}
