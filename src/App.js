@@ -12,7 +12,6 @@ class App extends Component{
   state ={ 
     articles: [],
     ShowSideBar: false,
-    key: "?api-key=jIendE5Ra60B11N5MAOZ6zXjHWBxliPm",
     topic: "home.json",
     loading: false
   }
@@ -42,7 +41,7 @@ class App extends Component{
 
   logoClickedHandler = () => {
     this.setState({topic: "home.json"});
-    
+    this.setState({showSideBar: false})
   }
 
   requests = () => {

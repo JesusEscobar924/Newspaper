@@ -25,7 +25,7 @@ Button:focus{
     color: white;
     background-color: black;
 }
-@media (max-width: 500px) {
+@media (max-width: 941px) {
     .Button{
         width: 100%;
         font-size: 2rem;

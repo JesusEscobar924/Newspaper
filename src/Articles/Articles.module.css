@@ -7,7 +7,7 @@
     padding: 20px 40px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 941px) {
     .Articles{
         grid-template-columns: repeat(1,2fr) ; 
         padding: 10px;

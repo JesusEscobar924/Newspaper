@@ -42,8 +42,9 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 941px) {
     .Article{
         grid-template-columns: 1fr !important; 
+        
     }
 }
