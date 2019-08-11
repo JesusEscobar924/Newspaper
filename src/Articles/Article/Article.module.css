@@ -6,25 +6,44 @@
     text-align: center;
     background-color: white;
     padding: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.TextContainer{
+    padding: 20px;
 }
 
 .Image{
-    width: 300px;
-    height: 200px;
+    width: 100%;
 }
+
 .Title{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    text-align: left;
+    font-size: 1.5rem;
+}
+.Title a{
+    color: black;
+    text-decoration: none;
 }
 .Description{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: left;
 }
-.Author{
+.Fontmin{
     font-family: 'Roboto', sans-serif;
     font-size: small;
-    color: #9e9c9c; 
+    color: #8f8f8f; 
     text-align: left;
+}
+
+
+@media (max-width: 500px) {
+    .Article{
+        grid-template-columns: 1fr !important; 
+    }
 }

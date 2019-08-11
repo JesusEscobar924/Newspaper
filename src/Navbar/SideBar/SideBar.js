@@ -1,6 +1,6 @@
 import React from 'react'; 
 import classes from './SideBar.module.css';
-import Aux from '../../HOC/Auxiliar/aux';
+import Aux from '../../hoc/Auxiliar/aux';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
 
@@ -15,7 +15,7 @@ const sideBar = (props) => {
         <Aux>
             <div className={attachedClasses.join(' ')}>
                 <nav>
-                    <NavigationItems />
+                    <NavigationItems  clicked={props.ButtonClicked} actived={props.btnActived} />
                 </nav>
             </div>
         </Aux>

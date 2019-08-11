@@ -5,14 +5,14 @@ import Burger from './Burger/Burger'
 
 const navBar = (props) => {
     return(
-        <header className={classes.Header}>
-            <div className={classes.Lista}>
-            <li className={classes.Brand}><i className="far fa-newspaper"></i> News</li>
-            <li className={classes.H1}>Paper</li> 
+        <header  className={classes.Header}>
+            <div className={classes.ListaL} onClick={props.Logo}>
+                <li className={classes.Brand}> News</li>
+                <li className={classes.H1}>Paper</li> 
             </div>
-
+            
             <ul className={classes.Lista}>
-                <NavigationItems/>    
+                <NavigationItems actived={props.btnActived} clicked={props.ButtonClicked}/>    
             </ul>
             <Burger open={props.open} closed={props.closed} clicked={props.BurgerClicked}/>
             

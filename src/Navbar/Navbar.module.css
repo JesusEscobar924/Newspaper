@@ -2,10 +2,14 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     border-bottom: 1px solid rgb(177, 177, 177);
     margin: 0;
-    padding: 10px 20px;
+    padding:10px 20px 0 20px;
+    background-color: white;
+    
+        position: sticky;
+        top: 0px;
 }
 
 .Brand{
@@ -26,10 +30,27 @@
     flex-direction: row;
     list-style: none;
     margin: 0;
-   
+    cursor: pointer;
 }
+.ListaL{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    cursor: pointer;
+}
+
 @media (max-width: 500px) {
     .Lista {
         display: none;
     }
+    .ListaL li{
+        font-size: 2rem;
+    }
+    .Header{
+        align-items: center;
+        padding: 10px 10px;
+        z-index: 500;
+    }
+
 }
