@@ -1,5 +1,5 @@
 import React from 'react';
-import Aux from '../../hoc/Auxiliar/aux';
+import Hoc from '../../higherordercomponents/hoc';
 import Button from '../../Button/Button';
 
 
@@ -22,9 +22,9 @@ const navigationItems = (props) => {
         )
     });
     return(
-        <Aux>
+        <Hoc>
             {btnConverted}  
-        </Aux>
+        </Hoc>
         
     )
 }

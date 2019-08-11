@@ -1,6 +1,6 @@
 import React from 'react'; 
 import classes from './SideBar.module.css';
-import Aux from '../../hoc/Auxiliar/aux';
+import Hoc from '../../higherordercomponents/hoc';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
 
@@ -12,13 +12,13 @@ const sideBar = (props) => {
     }
      
     return (
-        <Aux>
+        <Hoc>
             <div className={attachedClasses.join(' ')}>
                 <nav>
                     <NavigationItems  clicked={props.ButtonClicked} actived={props.btnActived} />
                 </nav>
             </div>
-        </Aux>
+        </Hoc>
         
     );
 };
