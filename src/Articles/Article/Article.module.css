@@ -27,7 +27,6 @@
     font-weight: 500;
     text-align: left;
     font-size: 1rem;
-   
 }
 .Title a{
     color: #fff;
@@ -41,6 +40,7 @@
     font-weight: 300;
     font-size: 0.875rem;
     text-align: left;
+    line-height: 1.2rem;
 }
 .Fontmin{
     font-family: 'Roboto', sans-serif;
@@ -69,7 +69,7 @@
 
 
 
-@media (max-width: 941px) {
+@media (max-width: 700px) {
     .Article{
         grid-template-rows: 3fr 1fr !important;
         grid-template-columns: 1fr !important; 
@@ -85,10 +85,17 @@
         display: none;
     }
 }
-@media (min-width: 600px) and (max-width: 1000px){
+@media (min-width: 530px) and (max-width: 699px){
 
     .Article{
         height: 500px;
+    }
+
+}
+@media (min-width: 480px) and (max-width: 530px){
+
+    .Article{
+        height: 350px;
     }
 
 }

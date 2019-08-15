@@ -4,22 +4,27 @@
   --grisoscuro-color: #222629;
   --gris-color: #474b4f;
   --grisclaro-color: #6b6e70;
+ 
 }
+
 html{
   scroll-behavior: smooth;
+  
 }
 body {
   margin: 0;
   padding: 0;
-  max-width: 100vw;
-  
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #222629;
-
 }
 
 code {

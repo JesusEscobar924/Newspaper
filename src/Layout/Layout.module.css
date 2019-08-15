@@ -1,10 +1,10 @@
 .Layout{
     transition: transform .3s ease-in-out;
-    scroll-snap-type-y: y mandatory;
-}
-
-.Layout:first-child,.Layout:nth-child(2){
-    scroll-snap-align: start;
+    display:flex;
+    flex-flow: column;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
 }
 .sidebarActive{
     transform: translateX(20%);

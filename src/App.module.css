@@ -6,4 +6,13 @@
     flex-flow: column;
     justify-items: center;
     overflow: hidden;
+    align-items: center;
+    width: 100vw;
 } 
+.Container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}

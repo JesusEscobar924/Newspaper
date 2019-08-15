@@ -8,6 +8,8 @@
     background: var(--gris-color);
     border-radius: 40px 40px 0px 0px;
     scroll-snap-align: start;
+    width: 100%;
+    margin: 0;
 }
 
 @media (max-width: 1200px) {

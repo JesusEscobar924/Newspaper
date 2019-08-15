@@ -4,8 +4,6 @@ import classes from './Weather.module.css';
 import Spinner from '../../Spinner/Spinner'
 const reqSvgs = require.context ('../../Assets/icons', true, /\.svg$/)
 
-
-
 class Weather extends Component{
     state={
         lon:"",
@@ -16,16 +14,17 @@ class Weather extends Component{
         loading:true,
     }
     
-    componentDidMount(){
-        window.navigator.geolocation.getCurrentPosition(position => this.setState({lon: position.coords.longitude.toString(), lat: position.coords.latitude.toString()}) );
-    }
+    
     componentDidUpdate(prevProps, prevState, snapshot){
         if(prevState.lon !== this.state.lon){
-          this.requests()
-          
+            this.requests() 
         }
     }
    
+    weatherClicked=()=>{
+        window.navigator.geolocation.getCurrentPosition(position => this.setState({lon: position.coords.longitude.toString(), lat: position.coords.latitude.toString()}) );
+        
+    }
     
     requests =() =>{
         axios.get("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=VzbR6vO4JsqZBAUNyGtna0Q8GM0XTAbC&q="+this.state.lat+"," +this.state.lon).then(res =>{
@@ -38,12 +37,11 @@ class Weather extends Component{
     render(){
        
         return(
-            <div className={classes.Container}>
-                {this.state.loading ? <Spinner/> :
-                <div className={classes.Container}>
-                    <p className={classes.Grados}>{this.state.temperatura[0]+"°C"}</p>
-                    <img className={classes.Icon} src={reqSvgs (this.state.icon)} alt={"Weather"}></img>
-                </div>}
+            <div className={classes.Container} onClick={this.weatherClicked}>
+                   <div className={classes.Container}>
+                   {this.state.loading ? <p className={classes.Before}>Click Please</p> : <p className={classes.Grados}>{this.state.temperatura[0]+"°C"}</p>} 
+                   { this.state.loading ? <Spinner/> : <img className={classes.Icon} src={reqSvgs (this.state.icon)} alt={"Weather"}></img>}
+                </div>
             </div>
         )
     }

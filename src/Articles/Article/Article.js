@@ -10,7 +10,7 @@ class article extends Component {
 
         <div className={classes.TextContainer}>
           <h1 className={classes.Title}><a href={this.props.url}  rel="noopener noreferrer" target="_blank">{this.props.titulo}</a></h1> 
-          <p className={classes.Description} style={this.props.contenido.length >= 120 && window.screen.availWidth < 941 ? {display: "none"} : null} >{this.props.contenido}</p>
+          <p className={classes.Description} style={this.props.contenido.length >= 120 && window.screen.availWidth < 700 ? {display: "none"} : null} >{this.props.contenido}</p>
         </div>
 
         <div className={classes.Hiden}>

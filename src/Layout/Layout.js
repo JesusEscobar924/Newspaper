@@ -51,7 +51,7 @@ class Layout extends Component{
         this.setState({topic: topic});
         this.burgerHandler();
         window.scrollTo(0,altura);
-        console.log(this.myRef.current.firstChild.clientHeight)
+        
     }
 
     
