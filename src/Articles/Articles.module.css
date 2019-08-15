@@ -2,7 +2,7 @@
     display: grid;
     box-sizing: border-box;
     justify-items: center;
-    padding: 60px 30px;
+    padding: 60px 50px;
     grid-template-columns: repeat(2, minmax(300px, 1fr) );
     grid-gap: 2rem ;
     background: var(--gris-color);
