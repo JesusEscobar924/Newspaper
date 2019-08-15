@@ -1,13 +1,13 @@
 .Loader {
   display: flex;
-  color: #000000;
-  font-size: 90px;
+  color: var(--verdeclaro-color);
+  font-size: 50px;
   text-indent: -9999em;
   overflow: hidden;
   width: 1em;
   height: 1em;
-  border-radius: 50%;
-  margin: 150px auto;
+  border-radius: 20%;
+  margin: 40px auto;
   position: relative;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);

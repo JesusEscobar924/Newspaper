@@ -5,13 +5,17 @@ class article extends Component {
  
   render(){
     return(
-      <article style={this.props.imagen ? {gridTemplateColumns: "1fr 4fr" } : { gridTemplateColumns: "4fr" }} className={classes.Article}>
-        {this.props.imagen ? <img className={classes.Image} src={this.props.imagen}alt={this.props.caption}/>: null}  
+      <article  className={classes.Article}>
+       <a href={this.props.url}  rel="noopener noreferrer" target="_blank"><img className={classes.Image} src={this.props.imagen} alt={this.props.caption}/></a> 
+
         <div className={classes.TextContainer}>
           <h1 className={classes.Title}><a href={this.props.url}  rel="noopener noreferrer" target="_blank">{this.props.titulo}</a></h1> 
-          <p className={classes.Fontmin}>{this.props.date}</p>
-          <p className={classes.Description}>{this.props.contenido}</p>
-          <p className={classes.Fontmin}>{this.props.autor}</p>
+          <p className={classes.Description} style={this.props.contenido.length >= 120 && window.screen.availWidth < 941 ? {display: "none"} : null} >{this.props.contenido}</p>
+        </div>
+
+        <div className={classes.Hiden}>
+            <p className={classes.Fontmin}>{this.props.date}</p>
+            <p className={classes.Fontmin}>{this.props.autor}</p>
         </div>
     </article>
     )

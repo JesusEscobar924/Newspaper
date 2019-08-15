@@ -6,16 +6,20 @@ import distanceInWords from 'date-fns/distance_in_words/index'
 
 const articles = (props) => {
     
-    let articles = props.articles.map(a => {
-        let unid = uniqid();
-        let result = distanceInWords(
-            new Date(),
-            new Date(a.created_date)
-          );
-        return<Article key={unid} titulo={a.title} url={a.url} contenido={a.abstract} autor={a.byline}
-        date={result+ " ago"}
-        imagen={a.multimedia[4] ? a.multimedia[4].url : null } caption={a.multimedia[4] ? a.multimedia[4].caption : null}/>
-    });
+    let articles = props.articles.filter(f => f.multimedia[4] && f.multimedia[4].width / f.multimedia[4].height > 1 && f.multimedia[4].width / f.multimedia[4].height <=1.5 ).map(a => {
+            let unid = uniqid();
+
+            let result = distanceInWords(
+                new Date(),
+                new Date(a.created_date)
+            );
+            return <Article key={unid} titulo={a.title} url={a.url} contenido={a.abstract}  autor={a.byline}
+            date={result+ " ago"}
+            imagen={a.multimedia[4] ? a.multimedia[4].url : null } caption={a.multimedia[4] ? a.multimedia[4].caption : null}/>
+        
+    }).slice(0, 10);
+        
+    
     
     return(
         <div className={classes.Articles}>{articles}</div>

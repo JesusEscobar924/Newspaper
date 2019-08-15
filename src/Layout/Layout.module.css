@@ -1,0 +1,12 @@
+.Layout{
+    transition: transform .3s ease-in-out;
+    scroll-snap-type-y: y mandatory;
+}
+
+.Layout:first-child,.Layout:nth-child(2){
+    scroll-snap-align: start;
+}
+.sidebarActive{
+    transform: translateX(20%);
+}
+

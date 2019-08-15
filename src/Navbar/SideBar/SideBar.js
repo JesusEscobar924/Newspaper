@@ -14,7 +14,7 @@ const sideBar = (props) => {
     return (
         <Hoc>
             <div className={attachedClasses.join(' ')}>
-                <nav>
+                <nav style={{width: "60%"}}>
                     <NavigationItems  clicked={props.ButtonClicked} actived={props.btnActived} />
                 </nav>
             </div>

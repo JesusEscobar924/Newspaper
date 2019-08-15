@@ -1,0 +1,211 @@
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100vw;
+    flex-flow: column;
+    scroll-snap-align: start;
+  }
+  .Date{
+    color: #6b6e70;
+  }
+
+  .glitch {
+    color: #fff;
+    font-family: Anurati;
+    font-weight: 500;
+    font-size: 100px;
+    position: relative;
+    padding: 30px;
+  }
+
+  .glitch:before,.glitch:after {
+    content: 'Cyborg News';
+    color: #fff;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    padding: 30px;
+  }
+
+  .glitch:before {
+    left: 3px;
+    text-shadow: -3px 0 #002280;
+    animation: glitch-before 1s linear .5s 3 alternate-reverse;
+    clip: rect(0, 400px, 0, 0);
+  }
+
+  .glitch:after {
+    left: -3px;
+    text-shadow: -3px 0 rgb(113, 1, 128);
+    animation: glitch-after  1s linear .5s 3 alternate-reverse;
+    clip: rect(0, 0, 0, 0);
+  }
+  .glitch::after:hover{
+    left: -3px;
+    text-shadow: -3px 0 rgb(113, 1, 128);
+    animation: glitch-after  1s linear .5s 3 alternate-reverse;
+    clip: rect(0, 0, 0, 0);
+  }
+
+
+  
+  
+
+@font-face{
+    font-family: Anurati;
+    src: url(../Assets/Fuentes/Ailerons-Regular.otf);
+}
+
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(90px, 800px, 37px, 30px);
+  }
+  5% {
+    clip: rect(138px, 800px, 64px, 30px);
+  }
+  10% {
+    clip: rect(38px, 800px, 33px, 30px);
+  }
+  15% {
+    clip: rect(91px, 800px, 18px, 30px);
+  }
+  20% {
+    clip: rect(122px, 800px, 2px, 30px);
+  }
+  25% {
+    clip: rect(12px, 800px, 136px, 30px);
+  }
+  30% {
+    clip: rect(65px, 800px, 25px, 30px);
+  }
+  35% {
+    clip: rect(123px, 800px, 14px, 30px);
+  }
+  40% {
+    clip: rect(137px, 800px, 52px, 30px);
+  }
+  45% {
+    clip: rect(142px, 800px, 78px, 30px);
+  }
+  50% {
+    clip: rect(89px, 800px, 136px, 30px);
+  }
+  55% {
+    clip: rect(104px, 800px, 67px, 30px);
+  }
+  60% {
+    clip: rect(139px, 800px, 33px, 30px);
+  }
+  65% {
+    clip: rect(104px, 800px, 109px, 30px);
+  }
+  70% {
+    clip: rect(110px, 800px, 147px, 30px);
+  }
+  75% {
+    clip: rect(96px, 800px, 36px, 30px);
+  }
+  80% {
+    clip: rect(150px, 800px, 84px, 30px);
+  }
+  85% {
+    clip: rect(34px, 800px, 94px, 30px);
+  }
+  90% {
+    clip: rect(8px, 800px, 24px, 30px);
+  }
+  95% {
+    clip: rect(121px, 850px, 115px, 30px);
+  }
+  100% {
+    clip: rect(90px, 800px, 37px, 30px); 
+   
+  }
+}
+@keyframes glitch-after {
+  0% {
+    clip: rect(1px, 800px, 111px, 30px);
+  }
+  5% {
+    clip: rect(23px, 800px, 58px, 30px);
+  }
+  10% {
+    clip: rect(90px, 800px, 143px, 30px);
+  }
+  15% {
+    clip: rect(81px, 800px, 95px, 30px);
+  }
+  20% {
+    clip: rect(9px, 800px, 31px, 30px);
+  }
+  25% {
+    clip: rect(80px, 800px, 15px, 30px);
+  }
+  30% {
+    clip: rect(146px, 800px, 124px, 30px);
+  }
+  35% {
+    clip: rect(121px, 800px, 141px, 30px);
+  }
+  40% {
+    clip: rect(52px, 800px, 80px, 30px);
+  }
+  45% {
+    clip: rect(3px, 800px, 61px, 30px);
+  }
+  50% {
+    clip: rect(45px, 800px, 134px, 30px);
+  }
+  55% {
+    clip: rect(55px, 800px, 128px, 30px);
+  }
+  60% {
+    clip: rect(125px, 800px, 54px, 30px);
+  }
+  65% {
+    clip: rect(92px, 800px, 62px, 30px);
+  }
+  70% {
+    clip: rect(137px, 800px, 139px, 30px);
+  }
+  75% {
+    clip: rect(49px, 800px, 130px, 30px);
+  }
+  80% {
+    clip: rect(135px, 800px, 143px, 30px);
+  }
+  85% {
+    clip: rect(142px, 800px, 1px, 30px);
+  }
+  90% {
+    clip: rect(53px, 800px, 27px, 30px);
+  }
+  95% {
+    clip: rect(11px, 800px, 17px, 30px);
+  }
+  100% {
+    clip: rect(1px, 800px, 111px, 30px);
+    
+  }
+}
+
+@media (max-width: 941px) {
+  .glitch{
+    font-size: 50px;
+    padding: 0;
+  }
+  .glitch:after,.glitch:before{
+    padding: 0;
+    margin: 0;
+  }
+  .glitch:before{
+    left: -2px;
+  }
+  
+}
+
+

@@ -8,7 +8,7 @@ const Burger = (props) => {
         attachedClasses = [classes.Burger, classes.Open, classes.Opened]
     }
     return(
-        <div className={attachedClasses.join(' ')} onClick={props.clicked}>
+        <div className={attachedClasses.join(' ')} onClick={props.BurgerClicked}>
             <div className={props.open ? classes.OpenDiv : null}></div>
             <div></div>
             <div className={props.open ? classes.OpenDiv1 : null}></div>

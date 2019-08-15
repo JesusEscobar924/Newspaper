@@ -3,32 +3,30 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    width:100%;
+    width:30%;
     height: 100%;
     left: 0;
     top: 0;
     z-index: 200;
-    background-color: rgba(0, 0, 0,0.8);
-    padding: 32px 16px;
+    background-color: var(--verdeclaro-color);
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     list-style: none;
 }
 
-@media (min-width: 941px){
-    .SideBar {
-        display: none;
-    }
-}
 
 .Open{
     transform: translateX(0);
 }
 
 .Close{
-    transform: translateX(-100%);
+    transform: translateX(-101%);
 }
-.Logo{
-    height: 11%;
-    margin:20px;
+@media(max-width: 941px){
+    .Close{
+        transform: translateX(-150%);
+    }
+    .SideBar{
+        width: 70%;
+    }
 }

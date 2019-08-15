@@ -1,5 +1,9 @@
 .App{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-flow: column;
-    align-content: space-around;
-}
+    justify-items: center;
+    overflow: hidden;
+} 

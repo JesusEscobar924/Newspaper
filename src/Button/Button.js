@@ -8,7 +8,7 @@ const button = props => {
     }
     return(
     <button 
-        onClick={props.btnclicked} 
+        onClick={props.btnclicked}
         className={atachedclasses.join(" ")}
          name={props.boton.toLowerCase()+'.json'}
     >

@@ -1,22 +1,28 @@
 .Burger {
-    width: 50px;
-    height: 50px;
+    position: fixed;
+    width: 30px;
+    height: 30px;
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    margin: 0 10px;
+    padding: 7px 0;
+    margin: 0;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.4s ease;
+    overflow:hidden;
+    top:20px;
+    left:20px;
+    z-index: 100;
+    
 }
 
 .Burger div {
     position: relative;
-    width: 50px;
+    width: 30px;
     height: 2px;
-    background-color: rgb(117, 116, 116);
+    background-color: #fff;
     border-radius: 1px;
 }
 
@@ -36,11 +42,12 @@
     transform: rotate(90deg);
 }
 
-
-
-@media (min-width: 941px) {
-    .Burger {
-        display: none;
+@media (max-width: 941px) {
+    .Burger{
+        top: 12px;
+        left: 12px;
     }
+    
 }
+
 
