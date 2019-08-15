@@ -6,7 +6,7 @@
     grid-template-columns: repeat(2, minmax(300px, 1fr) );
     grid-gap: 2rem ;
     background: var(--gris-color);
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 40px 40px 10px 10px;
     scroll-snap-align: start;
     width: 100%;
     margin: 0;

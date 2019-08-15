@@ -2,7 +2,7 @@
     transition: transform .3s ease-in-out;
     display:flex;
     flex-flow: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     width: 100vw;
 }
