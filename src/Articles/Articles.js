@@ -6,7 +6,7 @@ import distanceInWords from 'date-fns/distance_in_words/index'
 
 const articles = (props) => {
     
-    let articles = props.articles.filter(f => f.multimedia[4] && f.multimedia[4].width / f.multimedia[4].height > 1 && f.multimedia[4].width / f.multimedia[4].height <=1.5 ).map(a => {
+    let articles = props.articles.filter(f => f.multimedia[4]  ).map(a => {
             let unid = uniqid();
 
             let result = distanceInWords(
@@ -15,9 +15,9 @@ const articles = (props) => {
             );
             return <Article key={unid} titulo={a.title} url={a.url} contenido={a.abstract}  autor={a.byline}
             date={result+ " ago"}
-            imagen={a.multimedia[4] ? a.multimedia[4].url : null } caption={a.multimedia[4] ? a.multimedia[4].caption : null}/>
+            imagen={a.multimedia[4].url } caption={ a.multimedia[4].caption}/>
         
-    }).slice(0, 10);
+    });
         
     
     

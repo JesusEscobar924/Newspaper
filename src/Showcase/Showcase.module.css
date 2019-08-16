@@ -6,20 +6,23 @@
     width: 100vw;
     flex-flow: column;
     scroll-snap-align: start;
-  }
-  .Date{
+}
+
+.Date{
     color: #6b6e70;
     font-size: 1.2rem;
-  }
+}
 
-  .glitch {
-    color: #fff;
-    font-family: Anurati;
-    font-weight: 500;
-    font-size: 100px;
-    position: relative;
-    padding: 30px;
-  }
+.glitch { 
+  color: #fff;
+  font-family: Anurati;
+  font-weight: 500;
+  font-size: 100px;
+  padding: 30px;
+  text-align: center;
+  
+}
+
 
   
 

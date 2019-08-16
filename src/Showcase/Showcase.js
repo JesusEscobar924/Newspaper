@@ -10,8 +10,8 @@ const showcase = (props) => {
     
     return (
         <div className={classes.box}>
-            <h1 className={classes.glitch}>Cyborg News</h1>
             
+            <h1 className={classes.glitch}>Cyborg News</h1>        
             <p className={classes.Date}>{date}</p>
     
             <Weather/> 

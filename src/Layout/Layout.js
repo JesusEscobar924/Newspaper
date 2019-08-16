@@ -17,8 +17,6 @@ class Layout extends Component{
             topic: "technology.json",
             loading: false,
             articles: [],
-            // inputField: "",
-            showSearch:false,
         }
         this.myRef = React.createRef();
     }
@@ -28,7 +26,7 @@ class Layout extends Component{
     }
 
     componentDidUpdate(prevProps, prevState, snapshot){
-        if(prevState.topic !== this.state.topic){
+        if(prevState.topic !== this.state.topic ){
           this.requests()
         }
     }
@@ -42,13 +40,16 @@ class Layout extends Component{
 
 
     showcaseClickedHandler = () => {
-        this.setState({showSideBar: false});
+        if(this.state.showSideBar){
+            this.setState({showSideBar: false});
+        }
+        
     }
       
     buttonClickedHandler = (event) =>{
         let altura= this.myRef.current.firstChild.clientHeight;
         let topic = event.target.name;
-        this.setState({topic: topic});
+        this.setState({topic,articles:[]});
         this.burgerHandler();
         window.scrollTo(0,altura);
         
@@ -84,6 +85,7 @@ class Layout extends Component{
 
                 <div 
                     ref={this.myRef}
+                    
                     onClick={this.showcaseClickedHandler} 
                     className={attachedclasses.join(' ')}>
 

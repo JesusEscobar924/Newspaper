@@ -32,7 +32,8 @@
 }
 @media(max-width:1000px){
     .Container{
-        top:2px;
-        right: 0;
+        top:5px;
+        right: 20px;
+        width: 10px;
     }
 }

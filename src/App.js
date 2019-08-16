@@ -8,14 +8,14 @@ class App extends Component{
   state={
     loading:true,
   }
-  componentDidMount(){
+  componentDidMount() {
     this.setState({loading:false})
   }
   render(){
     return (
       this.state.loading ? <div className={classes.Container}><Spinner/></div> : 
       <div className={classes.App}>        
-        <Layout/>    
+        <Layout />    
       </div>
     )
   ;}
