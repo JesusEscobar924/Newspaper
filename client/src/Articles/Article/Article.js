@@ -5,7 +5,7 @@ class article extends Component {
   constructor(props){
     super(props)
     this.state={
-      spans:20,
+      spans:10,
       loading:true,
     }
     this.imageRef = React.createRef();
