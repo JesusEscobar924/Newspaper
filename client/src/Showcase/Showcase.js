@@ -2,7 +2,7 @@ import React from 'react';
 import Weather from './Weather/Weather'
 import dateformat from 'date-fns/format';
 
-import classes from './Showcase.module.css';
+import classes from './Showcase.module.scss';
 
 
 const showcase = (props) => {

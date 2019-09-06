@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 import Showcase from '../Showcase/Showcase';
 import SideBar from '../Navbar/SideBar/SideBar';
 import Burger from '../Navbar/Burger/Burger';
-import classes from './Layout.styles.scss';
+import classes from './Layout.module.scss';
 import axios from 'axios';
 
 class Layout extends Component{
@@ -84,8 +84,9 @@ class Layout extends Component{
         if(this.state.showSideBar){
             attachedclasses = [classes.Layout, classes.sidebarActive]
         }
+
         return(
-            <div >
+            <div>
                  <SideBar 
                     btnActived={this.state.topic} 
                     open={this.state.showSideBar} 
@@ -104,10 +105,11 @@ class Layout extends Component{
                     className={attachedclasses.join(' ')}>
 
                     <Showcase 
+                     className={classes.glitch}
                         sidebarActive={this.state.showSideBar}
                         ScrollClicked={this.scrollClicked}
                     />
-
+                   
                     
                     {this.state.loading ? <Spinner/> : 
                     <Articles topic={this.state.topic.split(".")} articles={this.state.articles ?

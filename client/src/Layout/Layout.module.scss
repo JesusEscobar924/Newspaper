@@ -1,0 +1,17 @@
+.Layout{
+    transition: transform .3s ease-in-out;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+scrollbar-base-color: red;
+scrollbar-color: red;
+scrollbar-darkshadow-color: salmon;
+scrollbar-face-color: #222629;
+}
+.sidebarActive{
+    transform: translateX(20%);
+}
+

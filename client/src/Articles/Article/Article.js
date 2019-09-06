@@ -9,50 +9,44 @@ class article extends Component {
       loading:true,
     }
     this.imageRef = React.createRef();
+    this.articleRef = React.createRef();
+    this.textRef = React.createRef();
   }
   componentDidMount(){
     this.imageRef.current.addEventListener('load', this.setSpans)
   }
 
   setSpans = () => {
-    this.setState({loading:false
-    })
-    let height = 0;
-    let width= 0;
-    let number=5;
-    let proporcion=0;
+
+    this.setState({loading:false})
+   
+    let height=0;
+    let width=0;
+    let proporcion= 0;
+    let widthArt=0;
     if(!this.state.loading){
       height = this.imageRef.current.clientHeight;
-      width= this.imageRef.current.clientWidth; 
-      proporcion = (height/width);
-      if(proporcion<0.5){
-        number-=6
-      }
-      
-    }
-    if(proporcion < 0.5 && window.innerWidth < 440){
-      number-=2
-    }
-    if(proporcion < 0.5 && window.innerWidth > 1500){
-      number-=3
-    }
-    if(window.innerWidth<440){
-      number-=1
-    }
 
-    if(window.innerWidth>=1500){
-      number-=1
+      width= this.imageRef.current.clientWidth;
+      
+      widthArt = this.articleRef.current.clientWidth;
+
+      proporcion = (height/width);
     }
-    
-    const result= proporcion * number;
-    const spans = Math.ceil(height / (10 + result) ); 
+    let adicional = Math.round((this.textRef.current.clientHeight/100)+proporcion);
+    console.log(adicional)
+
+    const spans = Math.ceil(((proporcion*widthArt)/40))+adicional; 
+
     this.setState({spans})
-   
+
+ 
   }
  
   render(){
     return(
       <article 
+        ref={this.articleRef}
         style={{gridRowEnd: `span ${this.state.spans}`}}
         className={classes.Article} >
         <a  
@@ -66,6 +60,7 @@ class article extends Component {
             alt={this.props.caption}/></a> 
 
           <div  
+            ref={this.textRef}
             className={classes.TextContainer}>
             <h1 
               className={classes.Title}>

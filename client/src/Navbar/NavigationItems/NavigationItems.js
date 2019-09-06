@@ -2,12 +2,15 @@ import React from 'react';
 
 import Button from '../../Button/Button';
 
-let more = 8;
+
 const navigationItems = (props) => {
     const btn = [
         "home",
         "arts",
+        "fashion",
         "food",
+        "magazine",
+        "movies",
         "politics",
         "science",
         "sports", 
@@ -18,12 +21,13 @@ const navigationItems = (props) => {
     let btnConverted = btn.map(key => {
         return (
         <li  key={key}>
-            <Button btnclicked={props.clicked}
+            <Button 
+                btnclicked={props.clicked}
                 active={props.actived}
                 boton={key.toUpperCase()}/>
         </li>
         )
-    }).slice(0,more);
+    })
     return(
         <div>
             {btnConverted} 

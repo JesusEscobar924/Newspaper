@@ -9,6 +9,7 @@
     justify-items: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0,0,0,0.2);
     text-align: center;
+    
 }
 
 .Image{
@@ -25,7 +26,6 @@
 .Title{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    margin: 0;
     font-size: 1rem;
     align-content: center;
     margin: 5px;
@@ -42,7 +42,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: small;
     color: #c1c1c1;
-    margin: 0;
+    margin:0;
     text-transform: uppercase;
 }
 

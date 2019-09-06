@@ -2,7 +2,8 @@ import React from 'react';
 import Article from './Article/Article';
 import classes from './Articles.module.css';
 import uniqid from 'uniqid';
-import distanceInWords from 'date-fns/distance_in_words/index'
+import distanceInWords from 'date-fns/distance_in_words/index';
+
 
 const articles = (props) => {
     
@@ -24,7 +25,6 @@ const articles = (props) => {
             />
         
     });
-        
     
     
     return(
@@ -34,6 +34,7 @@ const articles = (props) => {
            
             {articles}
         </div>
+        
         </div>
         
     )

@@ -14,9 +14,12 @@ const sideBar = (props) => {
     return (
         <div>
             <div className={attachedClasses.join(' ')}>
-                <nav className={classes.Nav} >
-                    <NavigationItems  clicked={props.ButtonClicked} actived={props.btnActived} />
-                </nav>
+                
+                    <NavigationItems  
+                        clicked={props.ButtonClicked} 
+                        actived={props.btnActived} 
+                    />
+              
             </div>
         </div>
         

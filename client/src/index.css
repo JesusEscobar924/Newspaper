@@ -12,7 +12,6 @@
 
 html{
   scroll-behavior: smooth;
-  
 }
 body {
   overflow-x: hidden;
@@ -29,9 +28,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #222629;
+
+
+
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+  
+body::-webkit-scrollbar-track
+{
+	
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: rgb(93, 93, 93);
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: var(--gris-color);
+	border: 2px solid #555555;
 }
