@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import Articles from '../Articles/Articles';
 import Spinner from '../Spinner/Spinner';
 import Footer from '../Footer/Footer';
-
 import Showcase from '../Showcase/Showcase';
 import SideBar from '../Navbar/SideBar/SideBar';
 import Burger from '../Navbar/Burger/Burger';

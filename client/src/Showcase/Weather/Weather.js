@@ -14,11 +14,15 @@ class Weather extends Component{
     }
     
    
-    weatherClicked = () => {
-        window.navigator.geolocation.getCurrentPosition(position => this.setState({lon: position.coords.longitude.toString(), lat: position.coords.latitude.toString()}) );
-        if(this.state.lon.length){
-            this.requests()
-        }
+     weatherClicked = () => {
+        window.navigator.geolocation.getCurrentPosition(
+            position => {
+                this.setState({lon: position.coords.longitude.toString(), lat: position.coords.latitude.toString()})
+                this.requests()
+            });
+            
+           
+        
     }
     
     requests = () => {

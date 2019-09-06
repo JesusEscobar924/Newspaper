@@ -51,7 +51,7 @@ app.post('/weather', (req,res) => {
   }
 
   axios.get("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey="+weather+"&q="+ lat + "," +lon ).then(response =>{ let Key = response.data.Key 
-  console.log(Key)
+  
 
   axios.get("http://dataservice.accuweather.com/currentconditions/v1/"+Key+"?apikey="+weather).then(response => {
     file.temperatura = response.data[0].Temperature.Metric.Value.toString().split("."), 
