@@ -27,7 +27,7 @@ class Weather extends Component{
     
     requests = () => {
         axios({
-            url: 'http://localhost:5000/weather',
+            url: '/weather',
             method: 'post',
             data: {
               lat: this.state.lat,

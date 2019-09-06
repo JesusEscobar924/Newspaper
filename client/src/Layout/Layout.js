@@ -67,7 +67,7 @@ class Layout extends Component{
     requests = () => {
         this.setState({loading:true})
         axios({
-            url: 'http://localhost:5000/articles',
+            url: '/articles',
             method: 'post',
             data: {
               topic: this.state.topic
