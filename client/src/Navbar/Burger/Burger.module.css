@@ -1,0 +1,53 @@
+.Burger {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow:hidden;
+    top:15px;
+    left:15px;
+    z-index: 100;
+    
+}
+
+.Burger div {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+
+.Open{
+    transform:rotate(135deg) ;
+    z-index: 500;
+}
+
+
+.OpenDiv{
+    top:10px;
+    transform: rotate(90deg);
+}
+.OpenDiv1{
+    top:-10px;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 941px) {
+    .Burger{
+        top: 12px;
+        left: 12px;
+    }
+    
+}
+
+

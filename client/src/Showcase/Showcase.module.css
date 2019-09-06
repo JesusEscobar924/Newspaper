@@ -1,0 +1,59 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-flow: column;
+    
+}
+
+.Date{
+    color: var(--grisclaro-color);
+    font-size: 1.2rem;
+}
+
+.glitch { 
+  color: #fff;
+  font-family: Anurati;
+  font-weight: 500;
+  font-size: 100px;
+  padding: 30px;
+  text-align: center;
+  
+}
+
+.Scroll{
+  color: var(--grisclaro-color);
+  text-align: center;
+  justify-self: flex-end;
+  margin-top: 70px;
+  height: 40px;
+  line-height: 1px;
+  transition:  .3s ease-in;
+  cursor: pointer;
+}
+.Scroll:hover{
+  transform: scale(1.08);
+  color:#fff;
+}
+
+
+  
+
+@font-face{
+    font-family: Anurati;
+    src: url(../Assets/Fuentes/Ailerons-Regular.otf);
+}
+
+
+
+@media (max-width: 941px) {
+  .glitch{
+    font-size: 50px;
+    padding: 0;
+  }
+  
+}
+
+

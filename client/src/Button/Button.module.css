@@ -1,0 +1,25 @@
+.Button{
+    color: #ffffff;
+    background: transparent;
+    border:none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: .5rem;
+    margin: 10px 0;
+    transition: 0.2s ease-in;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: 100%;
+}
+
+Button:hover{
+    color: var(--grisclaro-color);
+}
+Button:focus{
+    outline: none;
+}
+
+.Active{
+    color: black;
+   
+}
